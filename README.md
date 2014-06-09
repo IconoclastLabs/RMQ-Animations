@@ -1,6 +1,8 @@
 RMQ Animations
 ===================
 
+This is the application used to create the animations illustrated in the documentation of [RMQ Canned Animations](http://rubymotionquery.com/?s=canned+animations&post_type=document).
+
 ### This repo is a simple app to illustrate the animations available by RMQ:
 * `rmq(my_view).animations.fade_in`
 * `rmq(my_view).animations.fade_out`
