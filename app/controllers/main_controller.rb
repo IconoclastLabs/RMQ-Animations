@@ -3,6 +3,7 @@ class MainController < UIViewController
   def viewDidLoad
     super
 
+    self.title = "RMQ Animations"
     # Sets a top of 0 to be below the navigation control
     self.edgesForExtendedLayout = UIRectEdgeNone
 
@@ -11,6 +12,12 @@ class MainController < UIViewController
 
     # Create your UIViews here
     @hello_world_label = rmq.append(UILabel, :hello_world).get
+
+    rmq.append(UIView, :button_set).tap do |form|
+      form.append(UIButton, :fade_in).on(:tap) do |sender|
+        p "FADING IN"
+      end
+    end
   end
 
   # Remove if you are only supporting portrait
