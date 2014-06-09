@@ -17,6 +17,12 @@ class MainController < UIViewController
       form.append(UIButton, :fade_in).on(:tap) do |sender|
         p "FADING IN"
       end
+
+      form.append(UIButton, :fade_out).on(:tap) do |sender|
+        p "FADING OUT"
+      end
+
+      rmq(:animation_button).distribute(:vertical, margin: 5)
     end
   end
 

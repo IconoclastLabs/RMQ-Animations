@@ -24,7 +24,7 @@ class MainStylesheet < ApplicationStylesheet
 
   def animation_button(st)
     padding = 10
-    st.frame = {l: padding, t:0, w: app_width - 2 * padding, h: 50}
+    st.frame = {l: padding, t:0, w: app_width - 2 * padding, h: 35}
     st.background_color = color.from_hex('#2483C5')
     st.corner_radius = 5
     rmq(st.view).tag(:animation_button)
@@ -34,5 +34,10 @@ class MainStylesheet < ApplicationStylesheet
     animation_button(st)
     st.text = "Fade In"
   end 
+
+  def fade_out(st)
+    animation_button(st)
+    st.text = "Fade Out"
+  end
 
 end
