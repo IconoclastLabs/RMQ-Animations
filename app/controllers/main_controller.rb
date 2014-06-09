@@ -53,7 +53,8 @@ class MainController < UIViewController
       end
 
       rmq(:animation_button).distribute(:vertical, margin: 5)
-    end
+    end.resize_to_fit_subviews
+
   end
 
   # Remove if you are only supporting portrait

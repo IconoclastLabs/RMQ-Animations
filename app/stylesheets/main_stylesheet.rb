@@ -10,7 +10,7 @@ class MainStylesheet < ApplicationStylesheet
   end
 
   def hello_world(st)
-    st.frame = {t: 85, w: app_width, h: 18}
+    st.frame = {t: 70, w: app_width, h: 18}
     st.centered = :horizontal
     st.text_alignment = :center
     st.text = 'RMQ Animations'
@@ -19,7 +19,7 @@ class MainStylesheet < ApplicationStylesheet
   end
 
   def button_set(st)
-    st.frame = {t: 185}
+    st.frame = {t: 145}
   end
 
   def animation_button(st)
