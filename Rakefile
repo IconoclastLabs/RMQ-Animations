@@ -8,7 +8,7 @@ Bundler.require
 
 Motion::Project::App.setup do |app|
 
-  app.name = 'rmq_animations'
+  app.name = 'RMQ Animations'
   app.identifier = 'com.your_domain_here.rmq_animations'
   app.short_version = '0.1.0'
   app.version = app.short_version

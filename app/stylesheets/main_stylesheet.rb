@@ -9,7 +9,7 @@ class MainStylesheet < ApplicationStylesheet
     st.background_color = color.white
   end
 
-  def hello_world(st)
+  def animation_text(st)
     st.frame = {t: 70, w: app_width, h: 18}
     st.centered = :horizontal
     st.text_alignment = :center
