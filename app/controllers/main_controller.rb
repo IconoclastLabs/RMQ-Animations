@@ -14,12 +14,42 @@ class MainController < UIViewController
     @hello_world_label = rmq.append(UILabel, :hello_world).get
 
     rmq.append(UIView, :button_set).tap do |form|
-      form.append(UIButton, :fade_in).on(:tap) do |sender|
+      form.append(UIButton, :fade_in).on(:touch) do |sender|
         p "FADING IN"
       end
 
-      form.append(UIButton, :fade_out).on(:tap) do |sender|
+      form.append(UIButton, :fade_out).on(:touch) do |sender|
         p "FADING OUT"
+      end
+
+      form.append(UIButton, :blink).on(:touch) do |sender|
+        p "BLINKING"
+      end
+
+      form.append(UIButton, :throb).on(:touch) do |sender|
+        p "THROBBING"
+      end
+
+      form.append(UIButton, :sink_and_throb).on(:touch) do |sender|
+        p "SINKING AND THROBBING"
+      end
+
+      form.append(UIButton, :land_and_sink_and_throb).on(:touch) do |sender|
+        p "LANDING AND SINKING AND THROBBING"
+      end
+
+      form.append(UIButton, :drop_and_spin).on(:touch) do |sender|
+        p "DROPPING AND SPINNING"
+      end
+
+      form.append(UIButton, :start_spinner).on(:touch) do |sender|
+        p "STARTING SPINNER"
+        rmq.animations.start_spinner
+      end
+
+      form.append(UIButton, :stop_spinner).on(:touch) do |sender|
+        p "STOPPING SPINNER"
+        rmq.animations.stop_spinner
       end
 
       rmq(:animation_button).distribute(:vertical, margin: 5)

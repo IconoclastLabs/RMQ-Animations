@@ -10,7 +10,7 @@ class MainStylesheet < ApplicationStylesheet
   end
 
   def hello_world(st)
-    st.frame = {t: 100, w: 200, h: 18}
+    st.frame = {t: 85, w: app_width, h: 18}
     st.centered = :horizontal
     st.text_alignment = :center
     st.text = 'RMQ Animations'
@@ -19,7 +19,7 @@ class MainStylesheet < ApplicationStylesheet
   end
 
   def button_set(st)
-
+    st.frame = {t: 185}
   end
 
   def animation_button(st)
@@ -40,4 +40,38 @@ class MainStylesheet < ApplicationStylesheet
     st.text = "Fade Out"
   end
 
+  def blink(st)
+    animation_button(st)
+    st.text = "Blink"
+  end
+
+  def throb(st)
+    animation_button(st)
+    st.text = "Throb"
+  end
+
+  def sink_and_throb(st)
+    animation_button(st)
+    st.text = "Sink and Throb"
+  end
+
+  def land_and_sink_and_throb(st)
+    animation_button(st)
+    st.text = "Land and Sink and Throb"
+  end
+
+  def drop_and_spin(st)
+    animation_button(st)
+    st.text = "Drop and Spin"
+  end
+
+  def start_spinner(st)
+    animation_button(st)
+    st.text = "Start Spinner"
+  end
+
+  def stop_spinner(st)
+    animation_button(st)
+    st.text = "Stop Spinner"
+  end
 end
