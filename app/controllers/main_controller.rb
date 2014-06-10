@@ -15,47 +15,56 @@ class MainController < UIViewController
 
     rmq.append(UIView, :button_set).tap do |form|
       form.append(UIButton, :fade_in).on(:touch) do |sender|
-        p "FADING IN"
+        p sender.currentTitle
+        @animated_text.text = sender.currentTitle
         rmq(@animated_text).animations.fade_in
       end
 
       form.append(UIButton, :fade_out).on(:touch) do |sender|
-        p "FADING OUT"
+        p sender.currentTitle
+        @animated_text.text = sender.currentTitle
         rmq(@animated_text).animations.fade_out
       end
 
       form.append(UIButton, :blink).on(:touch) do |sender|
-        p "BLINKING"
+        p sender.currentTitle
+        @animated_text.text = sender.currentTitle
         rmq(@animated_text).animations.blink
       end
 
       form.append(UIButton, :throb).on(:touch) do |sender|
-        p "THROBBING"
+        p sender.currentTitle
+        @animated_text.text = sender.currentTitle
         rmq(@animated_text).animations.throb
       end
 
       form.append(UIButton, :sink_and_throb).on(:touch) do |sender|
-        p "SINKING AND THROBBING"
+        p sender.currentTitle
+        @animated_text.text = sender.currentTitle
         rmq(@animated_text).animations.sink_and_throb
       end
 
       form.append(UIButton, :land_and_sink_and_throb).on(:touch) do |sender|
-        p "LANDING AND SINKING AND THROBBING"
+        p sender.currentTitle
+        @animated_text.text = sender.currentTitle
         rmq(@animated_text).animations.land_and_sink_and_throb
       end
 
       form.append(UIButton, :drop_and_spin).on(:touch) do |sender|
-        p "DROPPING AND SPINNING"
+        p sender.currentTitle
+        @animated_text.text = sender.currentTitle
         rmq(@animated_text).animations.drop_and_spin
       end
 
       form.append(UIButton, :start_spinner).on(:touch) do |sender|
-        p "STARTING SPINNER"
+        p sender.currentTitle
+        @animated_text.text = sender.currentTitle
         rmq.animations.start_spinner
       end
 
       form.append(UIButton, :stop_spinner).on(:touch) do |sender|
-        p "STOPPING SPINNER"
+        p sender.currentTitle
+        @animated_text.text = sender.currentTitle
         rmq.animations.stop_spinner
       end
 
