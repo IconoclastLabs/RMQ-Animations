@@ -66,13 +66,23 @@ class MainStylesheet < ApplicationStylesheet
     st.text = "Drop and Spin"
   end
 
-  def start_spinner(st)
+  def slide_in(st)
     animation_button(st)
-    st.text = "Start Spinner"
+    st.text = "Slide In"
   end
 
-  def stop_spinner(st)
+  def slide_out(st)
     animation_button(st)
-    st.text = "Stop Spinner"
+    st.text = "Slide Out"
   end
+
+  # def start_spinner(st)
+  #   animation_button(st)
+  #   st.text = "Start Spinner"
+  # end
+
+  # def stop_spinner(st)
+  #   animation_button(st)
+  #   st.text = "Stop Spinner"
+  # end
 end

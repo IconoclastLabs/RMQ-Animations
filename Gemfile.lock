@@ -1,12 +1,17 @@
+GIT
+  remote: git://github.com/infinitered/rmq.git
+  revision: 5ee3bae7c4c5933cae10c0d8ac221d1c3a85e1e0
+  specs:
+    ruby_motion_query (0.6.1)
+
 GEM
   remote: https://rubygems.org/
   specs:
     rake (10.3.2)
-    ruby_motion_query (0.6.1)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
   rake
-  ruby_motion_query
+  ruby_motion_query!

@@ -58,16 +58,18 @@ class MainController < UIViewController
         })
       end
 
-      form.append(UIButton, :start_spinner).on(:touch) do |sender|
+      form.append(UIButton, :slide_in).on(:touch) do |sender|
         p sender.currentTitle
         @animated_text.text = sender.currentTitle
-        rmq.animations.start_spinner
+        rmq(@animated_text).animations.slide_in
       end
 
-      form.append(UIButton, :stop_spinner).on(:touch) do |sender|
+      form.append(UIButton, :slide_out).on(:touch) do |sender|
         p sender.currentTitle
         @animated_text.text = sender.currentTitle
-        rmq.animations.stop_spinner
+        rmq(@animated_text).animations.slide_out(completion: -> (did_finish, completion_rmq) {
+          rmq(@animated_text).apply_style :animation_text if did_finish
+        })
       end
 
       rmq(:animation_button).distribute(:vertical, margin: 5)
