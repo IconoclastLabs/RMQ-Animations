@@ -1,4 +1,4 @@
-class MainController < UIViewController 
+class MainController < UIViewController
 
   def viewDidLoad
     super
@@ -11,7 +11,7 @@ class MainController < UIViewController
     rmq(self.view).apply_style :root_view
 
     # Create your UIViews here
-    @animated_text = rmq.append(UILabel, :animation_text).get
+    @animated_text = rmq.append!(UILabel, :animation_text)
 
     rmq.append(UIView, :button_set).tap do |form|
       form.append(UIButton, :fade_in).on(:touch) do |sender|
@@ -53,7 +53,9 @@ class MainController < UIViewController
       form.append(UIButton, :drop_and_spin).on(:touch) do |sender|
         p sender.currentTitle
         @animated_text.text = sender.currentTitle
-        rmq(@animated_text).animations.drop_and_spin
+        rmq(@animated_text).animations.drop_and_spin(completion: -> (did_finish, completion_rmq) {
+          rmq(@animated_text).apply_style :animation_text if did_finish
+        })
       end
 
       form.append(UIButton, :start_spinner).on(:touch) do |sender|

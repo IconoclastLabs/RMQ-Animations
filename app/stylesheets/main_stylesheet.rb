@@ -16,6 +16,7 @@ class MainStylesheet < ApplicationStylesheet
     st.text = 'RMQ Animations'
     st.color = color.black
     st.font = font.medium
+    st.rotation = 0
   end
 
   def button_set(st)
@@ -33,7 +34,7 @@ class MainStylesheet < ApplicationStylesheet
   def fade_in(st)
     animation_button(st)
     st.text = "Fade In"
-  end 
+  end
 
   def fade_out(st)
     animation_button(st)
